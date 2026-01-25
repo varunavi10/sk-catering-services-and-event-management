@@ -1,4 +1,4 @@
-@import url('fonts.googleapis.com');
+@import url('https://fonts.googleapis.com');
 
 body {
     margin: 0;
@@ -81,11 +81,15 @@ footer p { margin: 0; }
     object-fit: cover;
 }
 
-h1, h2 {
+h1 {
     font-size: 60px; 
     margin-top: 20px;
     color: #d7b546; 
     font-family: 'Allura', cursive; 
+}
+
+h2 {
+    font-size: 28px; 
 }
 
 .tagline {
@@ -99,4 +103,49 @@ h1, h2 {
 .form-container {
     margin-top: 20px;
     overflow: hidden; 
+}
+
+
+/* ACCORDION STYLES FOR MENU PAGE */
+
+.accordion-header {
+    background-color: #001a35; /* Dark background matching header */
+    color: #d7b546; /* Gold text */
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    transition: background-color 0.4s ease;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.accordion-header:hover, .accordion-header.active {
+    background-color: #001f3f; /* Navy blue on hover/active */
+    color: white;
+}
+
+.accordion-content {
+    padding: 0 18px;
+    display: none; /* Hide content by default */
+    overflow: hidden;
+    background-color: #001a35;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    color: #fff; /* White text for contrast inside the panel */
+}
+
+/* Style the lists inside the accordion content */
+.accordion-content ul {
+    list-style-type: disc;
+    padding: 20px 20px 20px 40px;
+    line-height: 1.6;
+    color: inherit;
+}
+
+.accordion-content ul li strong {
+    color: #d7b546; /* Make subheadings gold */
 }
